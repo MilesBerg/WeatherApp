@@ -1,5 +1,10 @@
 
 
+body {
+    background-image: linear-gradient(rgb(33, 0, 85), rgb(102, 7, 255));
+    color: white;
+}
+
 .weather-container {
     max-width: 600px;
     margin: 0 auto;
@@ -41,19 +46,20 @@ button {
 
 .weather-info {
     text-align: center;
-    background-color: #ffffff;
+    background-image: #ffffff;
     border-radius: 5px;
     padding: 20px;
     margin-bottom: 20px;
 }
 
 .weather-info h2 {
-    font-size: 24px;
+    font-size: 70px;
     margin-bottom: 10px;
 }
 
 .weather-info p {
-    margin-bottom: 5px;
+    margin-bottom: 2px;
+    font-size: 40px;
 }
 
 
@@ -72,24 +78,6 @@ button {
     margin-bottom: 10px;
 }
 
-ul {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(4, auto); 
-    gap: 10px;
-    padding: 0;
-    margin: 3;
-    list-style-type: none;
-}
-
-ul li {
-    font-size: 30px;
-    text-align: right; 
-    border: 0px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    background-color: rgb(235, 235, 235);
-}
 
 ul li img{
     width: 40%;

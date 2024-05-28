@@ -1,0 +1,43 @@
+/* DailyForecast.css */
+
+.daily-forecast {
+    margin-top: 20px;
+  }
+  
+.daily-forecast h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+.daily-forecast ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 10px;
+    padding: 0;
+    margin: 3;
+    list-style-type: none;
+}
+
+  
+.daily-forecast li {
+    font-size: 30px;
+    text-align: right;
+    border: 0px solid #ccc;
+    border-radius: 20px;
+    padding: 10px;
+    background-image: linear-gradient(to left,rgb(33, 0, 85), rgb(102, 7, 255));
+}
+
+  
+.daily-forecast img {
+    width: 40%;
+    margin-right: 10px;
+  }
+  
+.daily-forecast strong {
+    margin-right: 10px;
+  }
+
+
+  
