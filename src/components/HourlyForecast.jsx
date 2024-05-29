@@ -4,7 +4,7 @@ import clearImage from './images/sun.png';
 import cloudyImage from './images/cloudy.png';
 import rainImage from './images/rain.png';
 import thunderstormImage from './images/thunderstorm.png';
-import './HourlyForecast.css'
+import './HourlyForecast.css';
 
 const getWeatherImage = (condition) => {
   switch (condition) {
@@ -17,12 +17,15 @@ const getWeatherImage = (condition) => {
     case 'Thunderstorm':
       return thunderstormImage;
     case 'Haze':
-      return rainImage;
     case 'Mist':
       return rainImage;
     default:
       return null;
   }
+};
+
+const toTitleCase = (str) => {
+  return str.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 };
 
 const HourlyForecast = ({ hourlyForecast }) => {
@@ -33,7 +36,11 @@ const HourlyForecast = ({ hourlyForecast }) => {
         {hourlyForecast.map((data, index) => (
           <li key={index}>
             <img src={getWeatherImage(data.weather[0].main)} alt={data.weather[0].description} />
-            <strong>{new Date(data.dt * 1000).toLocaleTimeString()}</strong>: {data.main.temp}°, {data.weather[0].description}
+            <p className="time">
+              <strong>{new Date(data.dt * 1000).toLocaleTimeString([], { hour: 'numeric', hour12: true })}</strong>
+            </p>
+            <p className="temp">{Math.round(data.main.temp)}°</p>
+            <p className="weather">{toTitleCase(data.weather[0].description)}</p>
           </li>
         ))}
       </ul>

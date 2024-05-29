@@ -34,18 +34,18 @@ function App() {
         `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${API_KEY}&units=imperial`
       );
 
-      const currentTime = new Date().getTime() / 1000; 
+      const currentTime = new Date().getTime() / 1000; // current time in seconds
       const next12HoursForecast = forecastResponse.data.list.filter(
         (data) => data.dt >= currentTime && data.dt <= currentTime + 12 * 3600
       );
       setHourlyForecast(next12HoursForecast);
 
- 
+      // Select one forecast per day (let's pick the 12:00 PM forecast, which is index 4 of each day in 3-hour intervals)
       const dailyForecastData = [];
       for (let i = 4; i < forecastResponse.data.list.length; i += 8) {
         dailyForecastData.push(forecastResponse.data.list[i]);
       }
-      setDailyForecast(dailyForecastData.slice(0, 7)); 
+      setDailyForecast(dailyForecastData.slice(0, 7)); // Ensure only 7 days
     } catch (error) {
       console.error('Error fetching data:', error);
     }
@@ -91,7 +91,7 @@ function App() {
         <div className="weather-info">
           <h2>{weather.name}</h2>
           <img src={getWeatherImage(weather.weather[0].main)} alt={weather.weather[0].description} />
-          <p>{weather.main.temp}°</p>
+          <p>{Math.round(weather.main.temp)}°</p>
           <p>Humidity: {weather.main.humidity}%</p>
           <p>Conditions: {weather.weather[0].description}</p>
         </div>
