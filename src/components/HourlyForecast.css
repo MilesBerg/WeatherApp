@@ -18,7 +18,9 @@
     gap: 10px;
     border-radius: 40px;
     padding: 100px;
-    margin: 70px;
+    margin: 200px;
+    margin-top: 50px;
+    margin-bottom: 70px;
     list-style-type: none;
     text-align: center;
 }

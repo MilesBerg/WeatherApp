@@ -22,12 +22,21 @@ form {
 
 form input {
     position: relative;
-    width: 10%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
-    border: none;
+    width: 200px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 0px solid rgba(255, 255, 255, 0.3); 
     border-radius: 5px;
     color: white;
+    font-size: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, border-color 0.3s; 
+}
+
+form input:focus {
+    background-color: rgba(255, 255, 255, 0.3); 
+    border-color: rgba(255, 255, 255, 0.5); 
+    outline: none; 
 }
 
 .weather-form input[type="text"] {
@@ -37,17 +46,29 @@ form input {
 }
 
 button {
-    padding: 10px;
+    padding: 10px 20px; 
     border: none;
-    border-radius: 4px;
+    border-radius: 5px; 
     background-color: #007BFF;
     color: white;
+    font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
-  
-  button:hover {
+
+button:hover {
     background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); 
 }
+
+button:active {
+    background-color: #004085;
+    transform: translateY(0); 
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2); 
+}
+
 
 
 .weather-info {
@@ -56,6 +77,7 @@ button {
     border-radius: 5px;
     padding: 20px;
     margin-bottom: 20px;
+    transition: text-align .5 ease;
 }
 
 .weather-info h2 {
@@ -68,12 +90,12 @@ button {
     font-size: 40px;
 }
 
-.weather-info img
-
-
-.weather-info:hover {
-    text-align: left;
+.weather-info img {
+    width: 20%;
 }
+
+
+
 
 
 

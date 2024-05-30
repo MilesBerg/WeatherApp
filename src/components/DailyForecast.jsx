@@ -17,6 +17,7 @@ const getWeatherImage = (condition) => {
     case 'Thunderstorm':
       return thunderstormImage;
     case 'Haze':
+      return rainImage;
     case 'Mist':
       return rainImage;
     default:
