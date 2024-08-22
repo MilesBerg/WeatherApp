@@ -9,7 +9,7 @@ import cloudyImage from './images/cloudy.png';
 import rainImage from './images/rain.png';
 import thunderstormImage from './images/thunderstorm.png';
 
-const API_KEY = '3e713af95d3d7836e126ee8fa584d246';
+const API_KEY = '';
 
 function App() {
   const [city, setCity] = useState('');
