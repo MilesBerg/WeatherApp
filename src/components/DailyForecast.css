@@ -23,8 +23,10 @@
     font-size: 30px;
     border: 0px solid #ccc;
     border-radius: 20px;
+    height: 50%;
     padding: 10px;
-    background-color: rgb(72, 72, 115, .3);
+    background: rgba(255, 255, 255, 0.10);       
+    backdrop-filter: blur(20px) saturate(150%);
 }
 
   
@@ -39,25 +41,25 @@
   width: 50px;
   position: relative;
   left: 85%;
-  top: -20%;
+  top: -40%;
   height: 20%;
   transform: translate(-50%,-50%)
 }
 
-.daily-forecast .daily-temp {
+.daily-forecast li .daily-temp {
   text-align: right;
   font-size: 250%;
   font-weight: bolder;
   position: relative;
   margin: 0%;
-  top: -40%;
+  top: -80%;
   height: 1%;
 }
 
 .daily-forecast .daily-condition {
   position: relative;
   text-align: right;
-  top: -40%;
+  top: -60%;
 }
   
 .daily-forecast strong {

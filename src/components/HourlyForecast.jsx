@@ -31,10 +31,12 @@ const toTitleCase = (str) => {
 const HourlyForecast = ({ hourlyForecast }) => {
   return (
     <div className='hourly-forecast'>
-      <h2>Hourly Weather Forecast for the next 12 hours</h2>
+
       <ul>
+        <h2>Hourly Weather Forecast for the next 12 hours</h2>
         {hourlyForecast.map((data, index) => (
           <li key={index}>
+            
             <img src={getWeatherImage(data.weather[0].main)} alt={data.weather[0].description} />
             <p className="time">
               <strong>{new Date(data.dt * 1000).toLocaleTimeString([], { hour: 'numeric', hour12: true })}</strong>
